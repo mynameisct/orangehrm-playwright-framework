@@ -1,0 +1,44 @@
+{
+  "name": "orangehrm-playwright-framework",
+  "version": "1.0.0",
+  "description": "Comprehensive Playwright Test Automation Framework for OrangeHRM",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:dev": "playwright test --config=playwright.config.ts --project=chromium",
+    "test:staging": "ENV=staging playwright test",
+    "test:prod": "ENV=prod playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:parallel": "playwright test --workers=4",
+    "test:serial": "playwright test --workers=1",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "allure:report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "orangehrm",
+    "page-object-model"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "dotenv": "^16.3.1",
+    "@faker-js/faker": "^8.3.1",
+    "prettier": "^3.1.0",
+    "eslint": "^8.55.0",
+    "allure-playwright": "^2.9.0",
+    "axios": "^1.6.2"
+  }
+}
